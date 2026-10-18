@@ -13,16 +13,16 @@ Get the latest zip from [Releases](../../releases), or take the files from `font
 | Folder | What | Use it for |
 | --- | --- | --- |
 | `fonts/variable/` | `Tunel[ROND,wght].ttf` | Apps and design tools that support variable fonts |
-| `fonts/ttf/` | 9 static weights, Thin to Black | Desktop use, older apps |
+| `fonts/ttf/` | 9 static weights, Thin to Black, square dots | Desktop use, older apps |
 | `fonts/otf/` | The same 9 weights with CFF outlines | Print and design tools that prefer OpenType CFF |
 | `fonts/web/` | Every font as WOFF2, plus `tunel.css` | Websites |
 
 On a Mac, double-click a font file and press Install. On Windows, right-click and choose
-Install. On the web:
+Install. In font menus the family is called **Tunel**. On the web:
 
 ```html
 <link rel="stylesheet" href="fonts/web/tunel.css">
-<style> body { font-family: "Tünel", monospace; font-weight: 400; } </style>
+<style> body { font-family: "Tunel", monospace; font-weight: 400; font-variation-settings: "ROND" 100; } </style>
 ```
 
 ## Axes
@@ -31,13 +31,16 @@ Two axes change only the dot, never the grid, so every setting keeps the same le
 
 - `wght` 100 to 900: dot size, from thin dots to touching dots. Named instances Thin,
   ExtraLight, Light, Regular, Medium, SemiBold, Bold, ExtraBold, Black.
-- `ROND` 0 to 100: dot shape, from square to round. The static fonts use round dots.
+- `ROND` 0 to 100: dot shape, from square to round. The default is 0, square dots, as the
+  Google Fonts axis registry sets it, so the static fonts use square dots. Set `ROND` to 100
+  for round dots.
 
 ## Character set
 
-361 characters:
+372 characters:
 
-- Uppercase: `A` to `Z` with every accented form of Latin-1 and Latin Extended-A
+- Uppercase: `A` to `Z` with every accented form of Latin-1 and Latin Extended-A, plus `Ș Ț`
+  and `Ẁ Ẃ Ẅ Ỳ`
   (`Ç Ğ İ Ö Ş Ü`, `À Á Â Ã Ä Å`, `Č Ď Ě Ň Ř Š Ť Ů Ž`, `Ą Ę Ł Ń Ś Ź Ż`, `Æ Œ Ø Þ Ð ẞ` and more)
 - Lowercase: `a` to `z` with the same accents, plus `ı ß æ œ ø þ ð ŋ ſ`
 - Figures: `0` to `9`, all one width so numbers line up on a board, with `¹ ² ³ ¼ ½ ¾`
@@ -46,7 +49,8 @@ Two axes change only the dot, never the grid, so every setting keeps the same le
 - Currency: `₺ € $ £ ¥ ¢ ¤`
 - Arrows: `← ↑ → ↓`
 
-That covers Turkish and every language written in Basic Latin, Latin-1 and Latin Extended-A:
+That covers the Google Fonts Latin Core set: Turkish and every language written in Basic Latin,
+Latin-1 and Latin Extended-A, with Romanian and Welsh:
 English, German, French, Spanish, Portuguese, Italian, Dutch, the Nordic languages, Polish,
 Czech, Slovak, Hungarian, Romanian, Croatian, Slovenian, the Baltic languages, Maltese and
 others.
@@ -71,15 +75,19 @@ accented form of it. The grid is 22 rows: capitals 14, x-height 10, descenders 4
 ## Build
 
 ```
-python3 -m venv .venv && .venv/bin/pip install "fonttools[woff]" pillow
+python3 -m venv .venv && .venv/bin/pip install "fonttools[woff]" pillow ufoLib2 gftools   # Python 3.10 or newer
 .venv/bin/python build.py specimen.png "Line one" "Line two"   # glyphs.json and a preview
 .venv/bin/python test.py                                       # checks every glyph
-.venv/bin/python font.py                                       # every font in fonts/
+.venv/bin/python font.py                                       # sources/ and every font in fonts/
 ```
 
 - `skeletons.txt`: the 1-dot skeletons
 - `glyphs.txt`: glyphs and marks drawn directly on the 2-dot grid
 - `test.py`: checks for stray dots, lumps, symmetry, shared parts, line heights and coverage
+- `sources/`: the UFO masters and `Tunel.designspace`, written by `font.py` from `glyphs.json`;
+  `sources/config.yaml` builds the fonts with the Google Fonts builder (`gftools builder`)
+
+The fonts pass the Google Fonts checks: `fontbakery check-googlefonts` reports no failures.
 
 ## License
 
