@@ -1,0 +1,299 @@
+The accent marks set above a letter. Everything else is in skeletons.txt.
+
+Marks are drawn on the face's own grid: a stroke is 2 dots, and a slanted mark is one step of
+the face's bridged diagonal ("##." / "###" / ".##"), so every dot sits in a lit 2 by 2 square.
+The ring is the one exception: a 2-dot ring needs six rows, so it is drawn with a 1-dot stroke.
+build.py sets the row: over a capital or an ascender the mark ends one row above the letter;
+over an x-height letter it starts on the row of the dot of the i.
+
+The N, drawn on the face grid: its diagonal runs corner to corner, one column every two rows,
+so it fits the width of H. Ŋ is the N with the tail of ŋ.
+
+@ N 4
+##....##
+##....##
+###...##
+###...##
+####..##
+####..##
+##.##.##
+##.##.##
+##..####
+##..####
+##...###
+##...###
+##....##
+##....##
+
+@ Ŋ 4
+##....##
+##....##
+###...##
+###...##
+####..##
+####..##
+##.##.##
+##.##.##
+##..####
+##..####
+##...###
+##...###
+##....##
+##....##
+......##
+.....###
+..#####.
+..####..
+
+V X Y v follow the N: their diagonals start in the corners and step evenly, one column every
+two rows (every three in V, which is taller than it is wide).
+
+The z: its diagonal must run from the end of the top bar to the start of the bottom bar, which
+the 1-dot grid cannot do in three rows, so it is drawn here, turning onto itself.
+
+@ z 8
+##########
+##########
+........##
+......####
+....####..
+..####....
+####......
+##........
+##########
+##########
+
+The x follows X: one column every two rows, the arms meeting in two rows.
+
+a and e share one terminal rule: an open end stops one dot short of the edge.
+
+@ a 8
+.#####..
+.######.
+.....###
+......##
+..######
+.#######
+###...##
+###...##
+.#######
+..######
+
+@ e 8
+..####..
+.######.
+###..###
+##....##
+########
+########
+##......
+###.....
+.######.
+..#####.
+
+Diagonals step evenly from the corners, and where a 2-dot stroke steps, one dot bridges the
+step (as in Z), so V X Y v x read smooth. Open ends (s, 6, 9, like a and e) stop one dot
+short of the edge; 9 is 6 turned.
+
+@ V 4
+##......##
+##......##
+###....###
+.##....##.
+.##....##.
+.###..###.
+..##..##..
+..##..##..
+..##..##..
+...####...
+...####...
+....##....
+....##....
+....##....
+
+@ X 4
+##......##
+###....###
+.##....##.
+.###..###.
+..##..##..
+..##..##..
+...####...
+...####...
+..##..##..
+..##..##..
+.###..###.
+.##....##.
+###....###
+##......##
+
+@ Y 4
+##......##
+###....###
+.##....##.
+.###..###.
+..##..##..
+..##..##..
+...####...
+...####...
+....##....
+....##....
+....##....
+....##....
+....##....
+....##....
+
+@ v 8
+##......##
+###....###
+.##....##.
+.###..###.
+..##..##..
+..##..##..
+...####...
+...####...
+....##....
+....##....
+
+@ x 8
+##....##
+###..###
+.##..##.
+.##..##.
+..####..
+..####..
+.##..##.
+.##..##.
+###..###
+##....##
+
+@ s 8
+..#####.
+.######.
+###.....
+###.....
+.#####..
+..#####.
+.....###
+.....###
+.######.
+.#####..
+
+@ 0 4
+...##...
+..####..
+.######.
+###..###
+##....##
+##....##
+##....##
+##....##
+##....##
+##....##
+###..###
+.######.
+..####..
+...##...
+
+@ 6 4
+..#####.
+.######.
+###.....
+##......
+##......
+##......
+######..
+#######.
+##...###
+##....##
+##....##
+###..###
+.######.
+..####..
+
+@ 9 4
+..####..
+.######.
+###..###
+##....##
+##....##
+###...##
+.#######
+..######
+......##
+......##
+......##
+.....###
+.######.
+.#####..
+
+The lira sign, drawn on the face grid: a straight stem down to the baseline, two short bars
+stepping up across it, the base turning up on the right.
+
+@ U+20BA 4
+..##......
+..##......
+..##......
+..##......
+..####....
+######....
+####......
+..####....
+######..##
+####....##
+..##....##
+..##...###
+..#######.
+..######..
+
+@ mark.grave 0
+##.
+###
+.##
+
+@ mark.acute 0
+.##
+###
+##.
+
+@ mark.circumflex 0
+.####.
+######
+##..##
+
+@ mark.caron 0
+##..##
+######
+.####.
+
+@ mark.breve 0
+##....##
+########
+.######.
+
+@ mark.tilde 0
+.###..##
+########
+##..###.
+
+@ mark.dieresis 0
+##..##
+##..##
+
+@ mark.macron 0
+######
+######
+
+@ mark.dot 0
+##
+##
+
+@ mark.ring 0
+.##.
+#..#
+.##.
+
+@ mark.doubleacute 0
+.##..##
+###.###
+##..##.
