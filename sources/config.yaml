@@ -1,0 +1,13 @@
+sources:
+  - Tunel.designspace
+familyName: Tunel
+buildVariable: true
+buildStatic: true
+buildOTF: true
+buildWebfont: true
+autohintTTF: false
+vfDir: ../fonts/variable
+ttDir: ../fonts/ttf
+otDir: ../fonts/otf
+woffDir: ../fonts/web
+removeOutlineOverlaps: false

@@ -19,15 +19,21 @@ MARKS = {
     "̀": "grave", "́": "acute", "̂": "circumflex", "̃": "tilde",
     "̄": "macron", "̆": "breve", "̇": "dot", "̈": "dieresis",
     "̊": "ring", "̋": "doubleacute", "̌": "caron", "̧": "cedilla",
-    "̨": "ogonek",
+    "̨": "ogonek", "̦": "commabelow",
 }
 BELOW = {"cedilla", "ogonek", "commabelow"}
 # Latvian letters decompose with a cedilla but are drawn with a comma below.
 COMMA_BELOW = set("ĢĶķĻļŅņŖŗ")
-ALIASES = {"Đ": "Ð", " ": " ", "\xad": "-"}
+ALIASES = {"Đ": "Ð", " ": " "}
 PAIRS = {"Ĳ": "IJ", "ĳ": "ij", "ŉ": "’n"}
 # Spacing forms of the marks, set at the x-height accent rows (cedilla stays below).
-SPACING = {"¨": "dieresis", "¯": "macron", "´": "acute", "¸": "cedilla"}
+SPACING = {"¨": "dieresis", "¯": "macron", "´": "acute", "¸": "cedilla", "`": "grave",
+           "^": "circumflex", "~": "tilde", "ˆ": "circumflex", "ˇ": "caron", "˘": "breve",
+           "˙": "dot", "˚": "ring", "˛": "ogonek", "˜": "tilde", "˝": "doubleacute"}
+# The combining marks standing alone are the same drawn marks.
+SPACING.update(MARKS)
+# Where a spacing form sits when it is not an accent: the tilde on the math axis.
+SPACING_TOP = {"~": 11}
 # Vulgar fractions: superior numerator, the slash, a numerator-sized denominator on the baseline.
 FRACTIONS = {"¼": ("¹", "frac.4"), "½": ("¹", "²"), "¾": ("³", "frac.4")}
 
@@ -68,8 +74,8 @@ def to_glyph(lit, width):
 def compose(ch, src):
     if ch in SPACING:
         g = dict(src["mark." + SPACING[ch]])
-        if SPACING[ch] != "cedilla":
-            g["top"] = 4
+        if SPACING[ch] not in BELOW:
+            g["top"] = SPACING_TOP.get(ch, 4)
         return to_glyph(cells(g), len(g["rows"][0])), [{"name": "mark." + SPACING[ch], "x": 0, "top": g["top"] - src["mark." + SPACING[ch]]["top"]}]
     if ch in FRACTIONS:
         num, den = (src[n] for n in FRACTIONS[ch])
@@ -122,8 +128,14 @@ def compose(ch, src):
 
 def targets():
     chars = [chr(c) for c in range(0x21, 0x7F)]
-    chars += [chr(c) for c in range(0xA0, 0x100)]
+    # Without the soft hyphen U+00AD: it is a hidden control character and draws nothing.
+    chars += [chr(c) for c in range(0xA0, 0x100) if c != 0xAD]
     chars += [chr(c) for c in range(0x100, 0x180)]
+    # The rest of Google Fonts Latin Core: Romanian S and T with comma below, Welsh W and Y.
+    chars += [chr(c) for c in (0x218, 0x219, 0x21A, 0x21B, 0x1E80, 0x1E81, 0x1E82, 0x1E83,
+                               0x1E84, 0x1E85, 0x1EF2, 0x1EF3)]
+    # Every mark as a character of its own, spacing and combining, from the drawn marks.
+    chars += [c for c in SPACING if c not in chars]
     return chars
 
 

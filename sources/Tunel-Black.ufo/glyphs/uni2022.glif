@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni2022" format="2">
+  <advance width="600"/>
+  <unicode hex="2022"/>
+  <outline>
+    <contour>
+      <point x="200" y="800" type="line"/>
+      <point x="200" y="800"/>
+      <point x="200" y="800" type="qcurve"/>
+      <point x="100" y="800" type="line"/>
+      <point x="100" y="800"/>
+      <point x="100" y="800" type="qcurve"/>
+      <point x="100" y="700" type="line"/>
+      <point x="100" y="700"/>
+      <point x="100" y="700" type="qcurve"/>
+      <point x="200" y="700" type="line"/>
+      <point x="200" y="700"/>
+      <point x="200" y="700" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="300" y="800" type="line"/>
+      <point x="300" y="800"/>
+      <point x="300" y="800" type="qcurve"/>
+      <point x="200" y="800" type="line"/>
+      <point x="200" y="800"/>
+      <point x="200" y="800" type="qcurve"/>
+      <point x="200" y="700" type="line"/>
+      <point x="200" y="700"/>
+      <point x="200" y="700" type="qcurve"/>
+      <point x="300" y="700" type="line"/>
+      <point x="300" y="700"/>
+      <point x="300" y="700" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="400" y="800" type="line"/>
+      <point x="400" y="800"/>
+      <point x="400" y="800" type="qcurve"/>
+      <point x="300" y="800" type="line"/>
+      <point x="300" y="800"/>
+      <point x="300" y="800" type="qcurve"/>
+      <point x="300" y="700" type="line"/>
+      <point x="300" y="700"/>
+      <point x="300" y="700" type="qcurve"/>
+      <point x="400" y="700" type="line"/>
+      <point x="400" y="700"/>
+      <point x="400" y="700" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="500" y="800" type="line"/>
+      <point x="500" y="800"/>
+      <point x="500" y="800" type="qcurve"/>
+      <point x="400" y="800" type="line"/>
+      <point x="400" y="800"/>
+      <point x="400" y="800" type="qcurve"/>
+      <point x="400" y="700" type="line"/>
+      <point x="400" y="700"/>
+      <point x="400" y="700" type="qcurve"/>
+      <point x="500" y="700" type="line"/>
+      <point x="500" y="700"/>
+      <point x="500" y="700" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="200" y="700" type="line"/>
+      <point x="200" y="700"/>
+      <point x="200" y="700" type="qcurve"/>
+      <point x="100" y="700" type="line"/>
+      <point x="100" y="700"/>
+      <point x="100" y="700" type="qcurve"/>
+      <point x="100" y="600" type="line"/>
+      <point x="100" y="600"/>
+      <point x="100" y="600" type="qcurve"/>
+      <point x="200" y="600" type="line"/>
+      <point x="200" y="600"/>
+      <point x="200" y="600" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="300" y="700" type="line"/>
+      <point x="300" y="700"/>
+      <point x="300" y="700" type="qcurve"/>
+      <point x="200" y="700" type="line"/>
+      <point x="200" y="700"/>
+      <point x="200" y="700" type="qcurve"/>
+      <point x="200" y="600" type="line"/>
+      <point x="200" y="600"/>
+      <point x="200" y="600" type="qcurve"/>
+      <point x="300" y="600" type="line"/>
+      <point x="300" y="600"/>
+      <point x="300" y="600" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="400" y="700" type="line"/>
+      <point x="400" y="700"/>
+      <point x="400" y="700" type="qcurve"/>
+      <point x="300" y="700" type="line"/>
+      <point x="300" y="700"/>
+      <point x="300" y="700" type="qcurve"/>
+      <point x="300" y="600" type="line"/>
+      <point x="300" y="600"/>
+      <point x="300" y="600" type="qcurve"/>
+      <point x="400" y="600" type="line"/>
+      <point x="400" y="600"/>
+      <point x="400" y="600" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="500" y="700" type="line"/>
+      <point x="500" y="700"/>
+      <point x="500" y="700" type="qcurve"/>
+      <point x="400" y="700" type="line"/>
+      <point x="400" y="700"/>
+      <point x="400" y="700" type="qcurve"/>
+      <point x="400" y="600" type="line"/>
+      <point x="400" y="600"/>
+      <point x="400" y="600" type="qcurve"/>
+      <point x="500" y="600" type="line"/>
+      <point x="500" y="600"/>
+      <point x="500" y="600" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="200" y="600" type="line"/>
+      <point x="200" y="600"/>
+      <point x="200" y="600" type="qcurve"/>
+      <point x="100" y="600" type="line"/>
+      <point x="100" y="600"/>
+      <point x="100" y="600" type="qcurve"/>
+      <point x="100" y="500" type="line"/>
+      <point x="100" y="500"/>
+      <point x="100" y="500" type="qcurve"/>
+      <point x="200" y="500" type="line"/>
+      <point x="200" y="500"/>
+      <point x="200" y="500" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="300" y="600" type="line"/>
+      <point x="300" y="600"/>
+      <point x="300" y="600" type="qcurve"/>
+      <point x="200" y="600" type="line"/>
+      <point x="200" y="600"/>
+      <point x="200" y="600" type="qcurve"/>
+      <point x="200" y="500" type="line"/>
+      <point x="200" y="500"/>
+      <point x="200" y="500" type="qcurve"/>
+      <point x="300" y="500" type="line"/>
+      <point x="300" y="500"/>
+      <point x="300" y="500" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="400" y="600" type="line"/>
+      <point x="400" y="600"/>
+      <point x="400" y="600" type="qcurve"/>
+      <point x="300" y="600" type="line"/>
+      <point x="300" y="600"/>
+      <point x="300" y="600" type="qcurve"/>
+      <point x="300" y="500" type="line"/>
+      <point x="300" y="500"/>
+      <point x="300" y="500" type="qcurve"/>
+      <point x="400" y="500" type="line"/>
+      <point x="400" y="500"/>
+      <point x="400" y="500" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="500" y="600" type="line"/>
+      <point x="500" y="600"/>
+      <point x="500" y="600" type="qcurve"/>
+      <point x="400" y="600" type="line"/>
+      <point x="400" y="600"/>
+      <point x="400" y="600" type="qcurve"/>
+      <point x="400" y="500" type="line"/>
+      <point x="400" y="500"/>
+      <point x="400" y="500" type="qcurve"/>
+      <point x="500" y="500" type="line"/>
+      <point x="500" y="500"/>
+      <point x="500" y="500" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="200" y="500" type="line"/>
+      <point x="200" y="500"/>
+      <point x="200" y="500" type="qcurve"/>
+      <point x="100" y="500" type="line"/>
+      <point x="100" y="500"/>
+      <point x="100" y="500" type="qcurve"/>
+      <point x="100" y="400" type="line"/>
+      <point x="100" y="400"/>
+      <point x="100" y="400" type="qcurve"/>
+      <point x="200" y="400" type="line"/>
+      <point x="200" y="400"/>
+      <point x="200" y="400" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="300" y="500" type="line"/>
+      <point x="300" y="500"/>
+      <point x="300" y="500" type="qcurve"/>
+      <point x="200" y="500" type="line"/>
+      <point x="200" y="500"/>
+      <point x="200" y="500" type="qcurve"/>
+      <point x="200" y="400" type="line"/>
+      <point x="200" y="400"/>
+      <point x="200" y="400" type="qcurve"/>
+      <point x="300" y="400" type="line"/>
+      <point x="300" y="400"/>
+      <point x="300" y="400" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="400" y="500" type="line"/>
+      <point x="400" y="500"/>
+      <point x="400" y="500" type="qcurve"/>
+      <point x="300" y="500" type="line"/>
+      <point x="300" y="500"/>
+      <point x="300" y="500" type="qcurve"/>
+      <point x="300" y="400" type="line"/>
+      <point x="300" y="400"/>
+      <point x="300" y="400" type="qcurve"/>
+      <point x="400" y="400" type="line"/>
+      <point x="400" y="400"/>
+      <point x="400" y="400" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="500" y="500" type="line"/>
+      <point x="500" y="500"/>
+      <point x="500" y="500" type="qcurve"/>
+      <point x="400" y="500" type="line"/>
+      <point x="400" y="500"/>
+      <point x="400" y="500" type="qcurve"/>
+      <point x="400" y="400" type="line"/>
+      <point x="400" y="400"/>
+      <point x="400" y="400" type="qcurve"/>
+      <point x="500" y="400" type="line"/>
+      <point x="500" y="400"/>
+      <point x="500" y="400" type="qcurve"/>
+    </contour>
+  </outline>
+</glyph>

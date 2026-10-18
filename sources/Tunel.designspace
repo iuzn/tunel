@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="wght" name="Weight" minimum="100" maximum="900" default="400"/>
+    <axis tag="ROND" name="Roundness" minimum="0" maximum="100" default="0"/>
+  </axes>
+  <sources>
+    <source filename="Tunel-Thin.ufo" familyname="Tunel" stylename="Thin">
+      <location>
+        <dimension name="Weight" xvalue="100"/>
+        <dimension name="Roundness" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="Tunel-ThinRound.ufo" familyname="Tunel" stylename="Thin Round">
+      <location>
+        <dimension name="Weight" xvalue="100"/>
+        <dimension name="Roundness" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="Tunel-Regular.ufo" familyname="Tunel" stylename="Regular">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Roundness" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="Tunel-RegularRound.ufo" familyname="Tunel" stylename="Regular Round">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Roundness" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="Tunel-Black.ufo" familyname="Tunel" stylename="Black">
+      <location>
+        <dimension name="Weight" xvalue="900"/>
+        <dimension name="Roundness" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="Tunel-BlackRound.ufo" familyname="Tunel" stylename="Black Round">
+      <location>
+        <dimension name="Weight" xvalue="900"/>
+        <dimension name="Roundness" xvalue="100"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance familyname="Tunel" stylename="Thin" filename="instances/Tunel-Thin.ufo" postscriptfontname="Tunel-Thin">
+      <location>
+        <dimension name="Weight" xvalue="100"/>
+        <dimension name="Roundness" xvalue="0"/>
+      </location>
+    </instance>
+    <instance familyname="Tunel" stylename="ExtraLight" filename="instances/Tunel-ExtraLight.ufo" postscriptfontname="Tunel-ExtraLight">
+      <location>
+        <dimension name="Weight" xvalue="200"/>
+        <dimension name="Roundness" xvalue="0"/>
+      </location>
+    </instance>
+    <instance familyname="Tunel" stylename="Light" filename="instances/Tunel-Light.ufo" postscriptfontname="Tunel-Light">
+      <location>
+        <dimension name="Weight" xvalue="300"/>
+        <dimension name="Roundness" xvalue="0"/>
+      </location>
+    </instance>
+    <instance familyname="Tunel" stylename="Regular" filename="instances/Tunel-Regular.ufo" postscriptfontname="Tunel-Regular">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Roundness" xvalue="0"/>
+      </location>
+    </instance>
+    <instance familyname="Tunel" stylename="Medium" filename="instances/Tunel-Medium.ufo" postscriptfontname="Tunel-Medium">
+      <location>
+        <dimension name="Weight" xvalue="500"/>
+        <dimension name="Roundness" xvalue="0"/>
+      </location>
+    </instance>
+    <instance familyname="Tunel" stylename="SemiBold" filename="instances/Tunel-SemiBold.ufo" postscriptfontname="Tunel-SemiBold">
+      <location>
+        <dimension name="Weight" xvalue="600"/>
+        <dimension name="Roundness" xvalue="0"/>
+      </location>
+    </instance>
+    <instance familyname="Tunel" stylename="Bold" filename="instances/Tunel-Bold.ufo" postscriptfontname="Tunel-Bold">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+        <dimension name="Roundness" xvalue="0"/>
+      </location>
+    </instance>
+    <instance familyname="Tunel" stylename="ExtraBold" filename="instances/Tunel-ExtraBold.ufo" postscriptfontname="Tunel-ExtraBold">
+      <location>
+        <dimension name="Weight" xvalue="800"/>
+        <dimension name="Roundness" xvalue="0"/>
+      </location>
+    </instance>
+    <instance familyname="Tunel" stylename="Black" filename="instances/Tunel-Black.ufo" postscriptfontname="Tunel-Black">
+      <location>
+        <dimension name="Weight" xvalue="900"/>
+        <dimension name="Roundness" xvalue="0"/>
+      </location>
+    </instance>
+  </instances>
+</designspace>

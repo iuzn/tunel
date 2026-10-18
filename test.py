@@ -21,7 +21,7 @@ from pathlib import Path
 
 HERE = Path(__file__).parent
 CAP, XH, BASE, DESC = 4, 8, 17, 21
-RING = set("ÅåŮů")   # the ring is the one mark drawn with a 1-dot stroke
+RING = set("ÅåŮů˚\u030a")   # the ring is the one mark drawn with a 1-dot stroke
 # Where a solid block is the form itself (a filled dot, a crossing, the N's corner), not a lump.
 SOLID = set("%&N®°¶º¼¾Ñ×đŃŅŇŊ˚\u030a•™")
 
