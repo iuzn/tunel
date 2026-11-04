@@ -180,6 +180,38 @@ def css():
     (web / "tunel.css").write_text("\n".join(faces))
 
 
+def plausible_web_fonts():
+    """Browsers refuse a WOFF2 that compresses past 100 to 1 as implausible ("Failed to convert WOFF
+    2.0 font to SFNT"), and a font of dots is repetitive enough to get there: the variable font is
+    111 to 1 at Brotli's best. Any file past the limit is encoded again at the highest quality under it."""
+    import brotli
+    from fontTools.ttLib import TTFont, woff2
+
+    def ratio(path):
+        compressed = int.from_bytes(path.read_bytes()[20:24], "big")
+        return sum(t.length for t in TTFont(path).reader.tables.values()) / compressed
+
+    best = brotli.compress
+    web = HERE / "fonts" / "web"
+    try:
+        for path in sorted(web.glob("*.woff2")):
+            if ratio(path) < 100:
+                continue
+            source = (HERE / "fonts" / "variable" if "[" in path.stem else HERE / "fonts" / "ttf") / f"{path.stem}.ttf"
+            for quality in range(11, 0, -1):
+                woff2.brotli.compress = lambda data, q=quality, **_: best(data, mode=brotli.MODE_FONT, quality=q)
+                font = TTFont(source)
+                font.flavor = "woff2"
+                font.save(path)
+                if ratio(path) < 100:
+                    print(f"{path.name}: Brotli quality {quality}, {ratio(path):.1f} to 1, {path.stat().st_size} bytes")
+                    break
+            else:
+                raise SystemExit(f"{path.name} stays past 100 to 1 at every quality")
+    finally:
+        woff2.brotli.compress = best
+
+
 def fonts():
     gftools = shutil.which("gftools") or str(Path(sys.executable).parent / "gftools")
     subprocess.run([gftools, "builder", "config.yaml"], cwd=SOURCES, check=True)
@@ -190,6 +222,7 @@ def fonts():
         f = TTFont(path)
         f["OS/2"].usWeightClass = cls
         f.save(path)
+    plausible_web_fonts()
     css()
 
 

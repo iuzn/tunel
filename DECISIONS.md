@@ -48,3 +48,25 @@ Append-only. A wrong record is superseded by a new one that names it, never edit
   - Tag `v1.000` is kept.
 - **Reversibility:** reversible. The old zip and tag both exist.
 - **Supersedes:** nothing.
+
+## D-004 (2026-11-04): The variable WOFF2 stays under 100 to 1, and the release is replaced in place
+
+- **Decision:** `font.py` encodes any web font past 100 to 1 again, at the highest Brotli quality
+  under the limit. Only `fonts/web/Tunel[ROND,wght].woff2` is affected, at quality 7. Release `v1.100`
+  keeps its name and tag, and its asset `Tunel-1.100.zip` is replaced with only that file changed.
+- **Owner's words:** "yayınla hemencecik"
+- **Why:** The file built at Brotli's default quality failed to load in browsers ("Failed to convert
+  WOFF 2.0 font to SFNT"). A font of dots compresses 111 to 1, and the decoder refuses anything past
+  100 to 1 as implausible. The file is the one `tunel.css` loads first, so the variable family did not
+  work on the web. The TTF, OTF and static WOFF2 files were fine and are unchanged.
+- **Evidence:**
+  - Chrome, one file per quality: 11, 10, 9 and 8 refused (111 to 102 to 1), 7, 6 and 5 accepted
+    (97 to 89 to 1).
+  - The file from the new zip loads, and so does the family through `tunel.css`.
+  - The old and new zips differ in that one entry.
+- **Alternatives:** A new version number, rejected because the font's data is unchanged and D-003
+  keeps one release entry.
+- **Authority:** owner, 2026-11-04.
+- **Reversibility:** reversible. The old zip is in `~/.Trash/tunel-release-v1.100-20261104/`.
+  Tag `v1.100` stays on `b9764d0`, so GitHub's automatic source archive for it still holds the old file.
+- **Supersedes:** nothing.
