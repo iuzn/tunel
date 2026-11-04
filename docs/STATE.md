@@ -22,6 +22,7 @@ In English: submit Tunel to Google Fonts, comply with every requirement, and see
 | Sources and build in the Google Fonts layout | `sources/` (6 UFO masters, `Tunel.designspace`, `config.yaml`), built by `gftools builder` through `font.py` |
 | Work merged | PR iuzn/tunel#1, merge commit `b9764d0` on `main` |
 | Release replaced in place | Release `v1.100` "Tunel 1.100" on `b9764d0`, asset `Tunel-1.100.zip`; the old zip is kept in `~/.Trash/tunel-release-v1.000-20261019/` and tag `v1.000` remains |
+| Variable WOFF2 loads in browsers | Encoded under the decoder's 100 to 1 limit by `font.py`; release zip replaced, D-004 |
 | Submission filed by the owner | https://github.com/google/fonts/issues/11135 "Add Tunel", labels I New Font and II Submission; no comments as of 2026-10-20 |
 
 ## Open
